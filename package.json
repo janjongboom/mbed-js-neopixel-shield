@@ -1,0 +1,8 @@
+{
+    "name": "mbed-js-neopixel-shield",
+    "description": "mbed.js driver for Neopixel shield",
+    "author": "Jan Jongboom <jan.jongboom@arm.com>",
+    "version": "1.0.0",
+    "scripts": {
+    }
+}

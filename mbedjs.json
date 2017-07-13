@@ -1,0 +1,9 @@
+{
+    "source": [
+        "."
+    ],
+    "includes": [
+        "mbed-js-blinkyshield/mbed-js-blinkyshield-lib.h"
+	],
+    "name": "blinkyshield"
+}

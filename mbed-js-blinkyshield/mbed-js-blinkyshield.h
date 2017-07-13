@@ -8,6 +8,6 @@
 #include "BlinkyShield.h"
 
 DECLARE_CLASS_CONSTRUCTOR(NeopixelShield);
-jerry_value_t mbed_js_wrap_native_object(NeopixelShield* ptr);
+jerry_value_t mbed_js_wrap_native_object(BlinkyShield* ptr);
 
 #endif // _JERRYSCRIPT_MBED_NeopixelShield_H

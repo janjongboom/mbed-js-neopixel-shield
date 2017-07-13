@@ -3,7 +3,7 @@
 #include "jerryscript-mbed-util/logging.h"
 #include "jerryscript-mbed-library-registry/wrap_tools.h"
 
-#include "NeopixelShield.h"
+#include "BlinkyShield.h"
 
 /**
  * NeopixelShield#WipeColor (native JavaScript method)
@@ -18,7 +18,7 @@ DECLARE_CLASS_FUNCTION(NeopixelShield, WipeColor) {
         uintptr_t ptr_val;
         jerry_get_object_native_handle(this_obj, &ptr_val);
 
-        NeopixelShield* native_ptr = reinterpret_cast<NeopixelShield*>(ptr_val);
+        BlinkyShield* native_ptr = reinterpret_cast<BlinkyShield*>(ptr_val);
 
         double jArg0 = jerry_get_number_value(args[0]);
         uint32_t arg0 = static_cast<uint32_t>(jArg0);
@@ -43,7 +43,7 @@ DECLARE_CLASS_FUNCTION(NeopixelShield, Red) {
         uintptr_t ptr_val;
         jerry_get_object_native_handle(this_obj, &ptr_val);
 
-        NeopixelShield* native_ptr = reinterpret_cast<NeopixelShield*>(ptr_val);
+        BlinkyShield* native_ptr = reinterpret_cast<BlinkyShield*>(ptr_val);
 
         double jArg0 = jerry_get_number_value(args[0]);
         uint8_t arg0 = static_cast<uint8_t>(jArg0);
@@ -68,7 +68,7 @@ DECLARE_CLASS_FUNCTION(NeopixelShield, Green) {
         uintptr_t ptr_val;
         jerry_get_object_native_handle(this_obj, &ptr_val);
 
-        NeopixelShield* native_ptr = reinterpret_cast<NeopixelShield*>(ptr_val);
+        BlinkyShield* native_ptr = reinterpret_cast<BlinkyShield*>(ptr_val);
 
         double jArg0 = jerry_get_number_value(args[0]);
         uint8_t arg0 = static_cast<uint8_t>(jArg0);
@@ -93,7 +93,7 @@ DECLARE_CLASS_FUNCTION(NeopixelShield, Blue) {
         uintptr_t ptr_val;
         jerry_get_object_native_handle(this_obj, &ptr_val);
 
-        NeopixelShield* native_ptr = reinterpret_cast<NeopixelShield*>(ptr_val);
+        BlinkyShield* native_ptr = reinterpret_cast<BlinkyShield*>(ptr_val);
 
         double jArg0 = jerry_get_number_value(args[0]);
         uint8_t arg0 = static_cast<uint8_t>(jArg0);
@@ -118,7 +118,7 @@ DECLARE_CLASS_FUNCTION(NeopixelShield, SetPixel) {
         uintptr_t ptr_val;
         jerry_get_object_native_handle(this_obj, &ptr_val);
 
-        NeopixelShield* native_ptr = reinterpret_cast<NeopixelShield*>(ptr_val);
+        BlinkyShield* native_ptr = reinterpret_cast<BlinkyShield*>(ptr_val);
 
         double jArg0 = jerry_get_number_value(args[0]);
         uint8_t arg0 = static_cast<uint8_t>(jArg0);
@@ -142,7 +142,7 @@ DECLARE_CLASS_FUNCTION(NeopixelShield, Flush) {
         uintptr_t ptr_val;
         jerry_get_object_native_handle(this_obj, &ptr_val);
 
-        NeopixelShield* native_ptr = reinterpret_cast<NeopixelShield*>(ptr_val);
+        BlinkyShield* native_ptr = reinterpret_cast<BlinkyShield*>(ptr_val);
 
 
 
@@ -163,7 +163,7 @@ DECLARE_CLASS_FUNCTION(NeopixelShield, Off) {
         uintptr_t ptr_val;
         jerry_get_object_native_handle(this_obj, &ptr_val);
 
-        NeopixelShield* native_ptr = reinterpret_cast<NeopixelShield*>(ptr_val);
+        BlinkyShield* native_ptr = reinterpret_cast<BlinkyShield*>(ptr_val);
 
 
 
@@ -178,14 +178,14 @@ DECLARE_CLASS_FUNCTION(NeopixelShield, Off) {
  * Called if/when the NeopixelShield is GC'ed.
  */
 void NAME_FOR_CLASS_NATIVE_DESTRUCTOR(NeopixelShield)(const uintptr_t native_handle) {
-    delete reinterpret_cast<NeopixelShield*>(native_handle);
+    delete reinterpret_cast<BlinkyShield*>(native_handle);
 }
 
 
 /**
  * mbed_js_wrap_native_object (turns a native NeopixelShield object into a JS object)
  */
-jerry_value_t mbed_js_wrap_native_object(NeopixelShield* ptr) {
+jerry_value_t mbed_js_wrap_native_object(BlinkyShield* ptr) {
     uintptr_t native_ptr = (uintptr_t) ptr;
 
     jerry_value_t js_object = jerry_create_object();
@@ -214,7 +214,7 @@ DECLARE_CLASS_CONSTRUCTOR(NeopixelShield) {
 
 
         // Create the native object
-        NeopixelShield* native_obj = new NeopixelShield();
+        BlinkyShield* native_obj = new BlinkyShield();
 
         return mbed_js_wrap_native_object(native_obj);
     }
